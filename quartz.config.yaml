@@ -198,7 +198,16 @@ plugins:
       links:
         GitHub: https://github.com/DanilShekarev/dnd-wiki
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    options:
+      title: Недавно изменённые
+      limit: 5
+      showTags: true
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 30
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
