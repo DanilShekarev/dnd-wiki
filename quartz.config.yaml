@@ -201,7 +201,7 @@ plugins:
     enabled: true
     options:
       title: Недавно изменённые
-      limit: 5
+      limit: 15
       showTags: true
       hideTagPages: true
       hideFolderPages: true

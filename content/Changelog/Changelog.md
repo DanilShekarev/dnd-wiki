@@ -22,3 +22,7 @@ type: changelog
 - [[0003 — Промежуточные стримы С2-С3]] — ранее
 - [[0002 — Канон-правки имён и уточнения]] — ранее
 - [[0001 — Первичная сборка базы знаний]] — ранее
+
+
+> [!info]- 📜 История заметки
+> [Все правки этой заметки на GitHub](https://github.com/DanilShekarev/dnd-wiki/commits/main/content/Changelog/Changelog.md)

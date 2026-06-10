@@ -11,6 +11,8 @@ $ErrorActionPreference = "Stop"
 
 $VaultPath   = "D:\Agent\DnD-Vault"
 $ContentPath = Join-Path $PSScriptRoot "content"
+$RepoCommits = "https://github.com/DanilShekarev/dnd-wiki/commits/main/content"
+$utf8NoBom   = New-Object System.Text.UTF8Encoding($false)  # UTF-8 without BOM
 
 if (-not (Test-Path $VaultPath)) {
     throw "Vault not found: $VaultPath"
@@ -43,11 +45,26 @@ if ($dashboard) {
         }
     }
 
-    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
     [System.IO.File]::WriteAllText($indexFile, $text, $utf8NoBom)
     Remove-Item $dashboard.FullName -Force
     Write-Host ("Dashboard '{0}' -> index.md (homepage)" -f $dashboard.Name) -ForegroundColor Green
 }
+
+# Append a collapsible "history on GitHub" link to every note, pointing at that
+# file's commit history. robocopy restores clean vault copies each run, so the
+# link is re-appended every sync (deterministic -> no spurious git diffs).
+# The Russian link text lives in footer-template.md (read as UTF-8) so this
+# script stays ASCII-only and parses safely in Windows PowerShell 5.1.
+$templatePath = Join-Path $PSScriptRoot "footer-template.md"
+$template = [System.IO.File]::ReadAllText($templatePath, [System.Text.Encoding]::UTF8)
+
+foreach ($note in Get-ChildItem -Path $ContentPath -Recurse -Filter *.md) {
+    $rel = $note.FullName.Substring($ContentPath.Length).TrimStart('\', '/')
+    $encoded = ($rel -split '[\\/]' | ForEach-Object { [uri]::EscapeDataString($_) }) -join '/'
+    $footer = $template.Replace('__URL__', "$RepoCommits/$encoded")
+    [System.IO.File]::AppendAllText($note.FullName, $footer, $utf8NoBom)
+}
+Write-Host "Appended GitHub history link to each note" -ForegroundColor Green
 
 $count = (Get-ChildItem $ContentPath -Recurse -Filter *.md | Measure-Object).Count
 Write-Host "Done. Markdown notes in content: $count" -ForegroundColor Green
