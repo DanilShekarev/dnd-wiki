@@ -3,7 +3,7 @@
 Статический сайт для D&D-вики, собранный из Obsidian-vault движком
 [Quartz v5](https://quartz.jzhao.xyz/) и публикуемый на GitHub Pages.
 
-**Адрес сайта:** https://danilshekarev.github.io/dnd-wiki/
+**Адрес сайта:** https://dnd.danishe.sbs/
 
 ## Как это устроено
 

@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: null
   locale: ru-RU
-  baseUrl: danilshekarev.github.io/dnd-wiki
+  baseUrl: dnd.danishe.sbs
   ignorePatterns:
     - private
     - templates
