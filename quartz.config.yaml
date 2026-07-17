@@ -139,9 +139,9 @@ plugins:
         repelForce: 0.7
         centerForce: 0.3
         linkDistance: 40
-        fontSize: 0.55
+        fontSize: 0.4
         focusOnHover: true
-        showTags: true
+        showTags: false
       # Глобальный граф (Ctrl/Cmd + G): свободная силовая раскладка вместо
       # радиальной — именно так выглядит граф в Obsidian.
       globalGraph:
@@ -150,10 +150,10 @@ plugins:
         repelForce: 0.8
         centerForce: 0.25
         linkDistance: 45
-        fontSize: 0.5
+        fontSize: 0.35
         focusOnHover: true
         enableRadial: false
-        showTags: true
+        showTags: false
     layout:
       position: right
       priority: 10
