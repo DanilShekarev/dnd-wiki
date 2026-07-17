@@ -139,12 +139,6 @@
       "commit": "3eabbaa252ce175665ab3f62e1af25948a83e8b6",
       "installedAt": "2026-06-03T13:16:36.665Z"
     },
-    "graph": {
-      "source": "github:quartz-community/graph",
-      "resolved": "https://github.com/quartz-community/graph.git",
-      "commit": "46f0ba1c3c0cc484697572e7bcf315fa384d80d2",
-      "installedAt": "2026-06-03T13:32:35.872Z"
-    },
     "hard-line-breaks": {
       "source": "github:quartz-community/hard-line-breaks",
       "resolved": "https://github.com/quartz-community/hard-line-breaks.git",
@@ -169,12 +163,6 @@
       "commit": "07eaca7b31a537c7c4a0fd2848b1f00014c940af",
       "installedAt": "2026-06-03T13:32:35.815Z"
     },
-    "obsidian-plugin-excalidraw": {
-      "source": "github:quartz-community/obsidian-plugin-excalidraw",
-      "resolved": "https://github.com/quartz-community/obsidian-plugin-excalidraw.git",
-      "commit": "dad0a4c0abdc8b3c2786277a2cbd67dc039c754c",
-      "installedAt": "2026-06-03T13:32:35.851Z"
-    },
     "og-image": {
       "source": "github:quartz-community/og-image",
       "resolved": "https://github.com/quartz-community/og-image.git",
@@ -192,17 +180,6 @@
       "resolved": "https://github.com/quartz-community/page-title.git",
       "commit": "a1c1fe0a9c6a5ce1acf6efa01d473a7d9850e2a3",
       "installedAt": "2026-06-03T13:32:36.002Z"
-    },
-    "quartz-themes": {
-      "source": {
-        "name": "quartz-themes",
-        "repo": "github:saberzero1/quartz-themes",
-        "subdir": "plugin"
-      },
-      "resolved": "https://github.com/saberzero1/quartz-themes.git",
-      "commit": "e258410285f82594743fd23f39132b6a0947bed3",
-      "subdir": "plugin",
-      "installedAt": "2026-06-03T13:17:42.994Z"
     },
     "reader-mode": {
       "source": "github:quartz-community/reader-mode",

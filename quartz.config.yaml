@@ -128,7 +128,9 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: github:quartz-community/graph
+  # Локальная (форкнутая) копия плагина графа: в неё добавлена опция hideTags,
+  # которой нет в upstream. Исходники — в ./plugins/graph.
+  - source: ./plugins/graph
     enabled: true
     options:
       # Локальный граф (в правой панели): показываем соседей на 2 шага и
@@ -142,6 +144,8 @@ plugins:
         fontSize: 0.4
         focusOnHover: true
         showTags: false
+        hideTags: [changelog, дашборд, служебное, сессия]
+        hideFolderPages: true
       # Глобальный граф (Ctrl/Cmd + G): свободная силовая раскладка вместо
       # радиальной — именно так выглядит граф в Obsidian.
       globalGraph:
@@ -154,6 +158,8 @@ plugins:
         focusOnHover: true
         enableRadial: false
         showTags: false
+        hideTags: [changelog, дашборд, служебное, сессия]
+        hideFolderPages: true
     layout:
       position: right
       priority: 10
