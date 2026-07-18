@@ -163,6 +163,16 @@ plugins:
     layout:
       position: right
       priority: 10
+  # Локальный плагин интерактивной карты кампании: заметка с `map-page: true`
+  # во frontmatter рендерится как полноэкранная карта (запечённые тайлы из
+  # map-editor + векторные маркеры/подписи). Исходники — в ./plugins/map,
+  # данные карты — в quartz/static/map (см. publish-map.ps1).
+  - source: ./plugins/map
+    enabled: true
+    options:
+      dataPath: static/map
+      frontmatterFlag: map-page
+      maxOverzoom: 4
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -314,3 +324,8 @@ layout:
         right: []
     canvas: {}
     bases: {}
+    map:
+      positions:
+        beforeBody: []
+        right: []
+        afterBody: []

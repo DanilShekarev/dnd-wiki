@@ -43,13 +43,13 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
       # The graph plugin is a local fork (./plugins/graph) adding a `hideTags`
-      # option. Lockfile-mode install silently skips local sources, and a
-      # restored plugin cache can still hold the old upstream copy — which
-      # makes --from-config report it as already installed. Drop it first so
-      # the fork is always linked.
-      - name: Link local plugin fork (graph)
+      # option, and map is a fully local plugin (./plugins/map). Lockfile-mode
+      # install silently skips local sources, and a restored plugin cache can
+      # still hold a stale copy — which makes --from-config report them as
+      # already installed. Drop them first so the local sources are always linked.
+      - name: Link local plugins (graph, map)
         run: |
-          rm -rf .quartz/plugins/graph
+          rm -rf .quartz/plugins/graph .quartz/plugins/map
           npx quartz plugin install --from-config
       - name: Build Quartz
         run: npx quartz build

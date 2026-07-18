@@ -139,6 +139,12 @@
       "commit": "3eabbaa252ce175665ab3f62e1af25948a83e8b6",
       "installedAt": "2026-06-03T13:16:36.665Z"
     },
+    "graph": {
+      "source": "./plugins/graph",
+      "resolved": "D:\\Agent\\dnd-wiki\\plugins\\graph",
+      "commit": "local",
+      "installedAt": "2026-07-18T11:17:35.491Z"
+    },
     "hard-line-breaks": {
       "source": "github:quartz-community/hard-line-breaks",
       "resolved": "https://github.com/quartz-community/hard-line-breaks.git",
@@ -150,6 +156,12 @@
       "resolved": "https://github.com/quartz-community/latex.git",
       "commit": "3dcfedcb5ae5e28b71248a72665ccb881e82c185",
       "installedAt": "2026-06-03T13:16:36.841Z"
+    },
+    "map": {
+      "source": "./plugins/map",
+      "resolved": "D:\\Agent\\dnd-wiki\\plugins\\map",
+      "commit": "local",
+      "installedAt": "2026-07-18T11:17:35.491Z"
     },
     "note-properties": {
       "source": "github:quartz-community/note-properties",
